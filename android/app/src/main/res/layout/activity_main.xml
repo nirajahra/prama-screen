@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="PRAMA SCREEN" />
+
+        <TextView
+            style="@style/Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="LIVE SCREEN SHARE" />
+
+        <!-- STAFF: SHARE -->
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STAFF · SHARE MY SCREEN" />
+
+            <EditText
+                android:id="@+id/etName"
+                style="@style/Field"
+                android:hint="YOUR NAME"
+                android:inputType="textCapCharacters" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="DEVICE CODE" />
+
+                <TextView
+                    android:id="@+id/tvCode"
+                    style="@style/Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.3"
+                    android:textSize="18sp"
+                    android:text="000000" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvShareStatus"
+                style="@style/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/muted"
+                android:text="NOT SHARING" />
+
+            <Button
+                android:id="@+id/btnShare"
+                style="@style/Btn"
+                android:text="START SHARING" />
+
+            <LinearLayout
+                android:id="@+id/rowSharing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnStop"
+                    style="@style/Btn"
+                    android:background="@drawable/btn_danger"
+                    android:text="STOP SHARING" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ADMIN: VIEW -->
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADMIN · VIEW STAFF SCREEN" />
+
+            <EditText
+                android:id="@+id/etPin"
+                style="@style/Field"
+                android:hint="ADMIN PIN"
+                android:inputType="numberPassword" />
+
+            <Button
+                android:id="@+id/btnView"
+                style="@style/Btn"
+                android:text="VIEW LIVE STAFF" />
+        </LinearLayout>
+
+        <!-- SERVER -->
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SERVER ADDRESS" />
+
+            <EditText
+                android:id="@+id/etServer"
+                style="@style/Field"
+                android:hint="WSS://YOUR-SERVER.ONRENDER.COM"
+                android:inputType="textUri"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="SCREEN IS SHARED ONLY AFTER STAFF TAPS START AND ALLOWS.\nA NOTIFICATION STAYS VISIBLE WHILE SHARING." />
+    </LinearLayout>
+</ScrollView>
